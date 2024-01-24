@@ -1,0 +1,399 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes bienvenida {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes imagendesplegable {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes rotar {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+@keyframes rotarimagen {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+body {
+  background-color: #f2f2f2;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+p, a {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.pilotos {
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  overflow: hidden;
+}
+.pilotos h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+.pilotos .carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.pilotos .carousel .card_piloto {
+  position: relative;
+  flex: 0 0 auto;
+  width: 300px;
+  height: auto;
+  background-color: #333;
+  color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, filter 0.5s ease;
+  text-align: center;
+}
+.pilotos .carousel .card_piloto img {
+  margin-top: 10px;
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+}
+.pilotos .carousel .card_piloto h2 {
+  font-size: 1.5em;
+  margin: 10px;
+  color: #f2f2f2;
+}
+.pilotos .carousel .card_piloto p {
+  margin: 10px;
+}
+.pilotos .carousel .card_piloto:hover {
+  transform: scale(1.1);
+  animation: fadeIn 2s;
+}
+
+.equipos {
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  overflow: hidden;
+}
+.equipos h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+.equipos .contenedor_equipos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transition: transform 0.5s ease-in-out;
+}
+.equipos .contenedor_equipos .contenedor_equipos_card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 500px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+}
+.equipos .contenedor_equipos .contenedor_equipos_card img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  height: 70%;
+  object-fit: cover;
+  animation: rotar 2s;
+}
+.equipos .contenedor_equipos .contenedor_equipos_card img:hover {
+  animation: rotarimagen 2s forwards;
+}
+.equipos .contenedor_equipos .contenedor_equipos_card h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+.equipos .contenedor_equipos .contenedor_equipos_card p {
+  color: white;
+  margin-bottom: 10px;
+}
+.equipos .contenedor_equipos .contenedor_equipos_card:hover {
+  transform: scale(1.15);
+}
+
+.circuitos {
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  overflow: hidden;
+}
+.circuitos .carrusel_circuitos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.circuitos .card_circuito {
+  width: 300px;
+  background-color: #533d3d;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.circuitos .card_circuito img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.circuitos .card_circuito p {
+  color: white;
+  margin: 10px 0;
+}
+
+.cabecera {
+  background-color: #333;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slide 2s;
+}
+.cabecera .cabecera_imagen {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.cabecera .cabecera_imagen img {
+  max-width: 18%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10%;
+}
+.cabecera h1 {
+  color: white;
+  font-size: 4em;
+}
+.cabecera .menu {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
+.cabecera .menu li a {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  position: relative;
+  z-index: 1;
+}
+.cabecera .menu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  transition: right 1s ease;
+  border-radius: 10%;
+  z-index: -1;
+}
+.cabecera .menu li a:hover::before {
+  right: 0;
+}
+
+.bienvenida {
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: bienvenida 2s;
+}
+.bienvenida .texto {
+  width: 50%;
+  margin-right: 10%;
+}
+.bienvenida .texto h2 {
+  font-size: 2.5em;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.bienvenida .texto p {
+  font-size: 1em;
+  color: #555;
+}
+.bienvenida .texto .boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0022;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+.bienvenida .texto .boton:hover {
+  background-color: #720035;
+}
+.bienvenida img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 0, 255, 0.6), 0 0 50px rgba(255, 255, 0, 0.5);
+  transition: box-shadow 1.5s ease;
+  transition: transform 1.5s ease;
+  animation: imagendesplegable 3s;
+}
+.bienvenida img:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 0, 255, 0.6), 0 0 40px rgba(255, 255, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.pie-pagina {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.pie-pagina .enlaces a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.pie-pagina .enlaces a:hover {
+  text-decoration: underline;
+}
+.pie-pagina .redes-sociales {
+  margin-top: 10px;
+}
+.pie-pagina .redes-sociales a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.pie-pagina .redes-sociales a:hover {
+  text-decoration: underline;
+}
+.pie-pagina p {
+  margin-top: 20px;
+}
+
+.serie {
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: bienvenida 2s;
+}
+.serie .texto {
+  width: 50%;
+  margin-left: 10%;
+}
+.serie .texto h2 {
+  font-size: 2.5em;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.serie .texto p {
+  font-size: 1em;
+  color: #555;
+}
+.serie .texto .boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0022;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+.serie .texto .boton:hover {
+  background-color: #720035;
+}
+.serie img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 0, 255, 0.6), 0 0 50px rgba(255, 255, 0, 0.5);
+  transition: box-shadow 1.5s ease;
+  transition: transform 1.5s ease;
+  animation: imagendesplegable 3s;
+}
+.serie img:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 0, 255, 0.6), 0 0 40px rgba(255, 255, 0, 0.5);
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=main.css.map */
